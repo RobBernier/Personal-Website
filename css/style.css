@@ -1,0 +1,267 @@
+      /*Tags and Such*/
+      .hideContent
+      {
+          display: block;
+          opacity:0;
+      }
+      .body-link{
+        color: gray;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: lato, sans-serif;
+      }
+      a,button {
+        text-decoration: none;
+        font-weight: bolder;
+      }
+      a:hover {
+        color: black;
+      }
+      ul {
+        list-style-type: none;
+      }
+      nav {
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+      }
+      nav li {
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        margin: 5px;
+        margin-left: 15px;
+      }
+      /*Contact Page*/
+      input, textarea{
+        border: 2px solid #3b3b3b;
+      }
+      textarea{
+        font-size: 70%;
+      }
+      input {
+        font-size: 100%;
+      }
+      table {
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .desc-text {
+        font-size: .8em;
+      }
+      /*Center Content*/
+
+      .outer {
+        height: 100%;
+        width: 100%;
+        display: table;
+        vertical-align: middle;
+      }
+      .container {
+        text-align: center;
+        position: relative;
+        vertical-align: middle;
+        display: table-cell;
+      }
+      /*Webpage Divisions*/
+
+      #main, #work, #bio, #media, #contact {
+        display: block;
+        padding: 0 5%;
+        height: 100vh;
+        min-height: 450px;
+      }
+      #media i {
+        margin: 30px;
+        color: white;
+      }
+      #media i:hover {
+        color: grey;
+      }
+      #main {
+        font-size: 200%;
+        background: #c7c7c7;
+        color: #171717;
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .40)), url(../img/image.jpg);
+        background-repeat: no-repeat;
+        background-attachment: relative;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      #work {
+        background-color: #292929;
+        color: #fff;
+      }
+      /*WORK BUTTONS*/
+
+      #internship-button {
+        background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgba(251, 153, 97, 0) 0%);
+        border: 4px solid #FFFFFF;
+      }
+      #portfolio-button {
+        background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgba(251, 153, 97, 0) 0%);
+        border: 4px solid #FFFFFF;
+      }
+      #si-button {
+        background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgba(251, 153, 97, 0) 0%);
+        border: 4px solid #FFFFFF;
+      }
+      #army-button{
+        background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgba(251, 153, 97, 0) 0%);
+        border: 4px solid #FFFFFF;
+      }
+      .work-icon-one-of-two {
+        width: 36%;
+        margin: 0 5% 0 5%;
+      }
+      .work-icon-one-of-one {
+        width: 75%;
+      }
+      .work-icon {
+        margin: 20px 0;
+      }
+      .work-icon, .work-back-button, button {
+        cursor: pointer;
+        border: 2px solid #292929;
+        /*border-radius: 6px;*/
+        background-size: 100% 200%;
+        -webkit-transition: background-position .3s;
+        -moz-transition: background-position .3s;
+        transition: background-position .3s;
+      }
+      .work-back-button{
+        color: white;
+        background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgba(251, 153, 97, 0) 0%);
+        border: 4px solid #FFFFFF;
+        padding: 10px;
+      }
+      .work-icon:hover, .work-back-button:hover, button:hover {
+        background-position: 0 -100%;
+      }
+      /*Buttons for contact*/
+      button {
+        padding: 10px;
+        background-color: white;
+        background-image: linear-gradient(to top, rgb(0, 0, 0) 50%, rgba(255, 255, 255, 0) 0%);
+        border-color: black;
+        font-size: 100%;
+        color: black;
+      }
+      button:hover {
+          color: white;
+      }
+      .work-icon {
+        display: inline-block;
+        padding: 12px 16px;
+        font-weight: bolder;
+        text-decoration: none;
+      }
+      .mail-icon{
+        color: black;
+      }
+      .mail-icon:hover{
+        color: grey;
+      }
+      /*Bio Area*/
+
+      #bio, #media {
+        background-color: #3b3b3b;
+        color: #fff;
+      }
+      #media {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+      #bio p {
+        text-align: justify;
+      }
+      #left-bio-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: left;
+        height: 50%;
+        width: auto;
+      }
+      #right-bio-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        resize: vertical;
+        height: 50%;
+        float: right;
+        width: 60%;
+      }
+      .bio-picture {
+        border-radius: 100%;
+      }
+      /*Media Queries*/
+
+      @media screen and (max-width:1200px) {
+        .work-icon {
+          margin: 20px 0;
+          width: 70vw;
+        }
+        #left-bio-box {
+          float: none;
+          display: block;
+          width: 100%;
+          height:auto;
+          margin: auto;
+        }
+        #right-bio-box {
+          float: none;
+          height: auto;
+          margin-top: 15px;
+          width: 100%;
+        }
+        .bio-picture {
+          max-width: 250px;
+        }
+        .down-arrow {
+          width: auto;
+        }
+      }
+      @media screen and (max-width:1000px) {
+        .bio-picture {
+          max-width: 175px;
+        }
+      }
+      @media screen and (min-width:901px) {
+        body {
+          font-size: x-large;
+        }
+        .bx-wrapper {
+          height: auto;
+          width: 80%;
+        }
+      }
+      /*Animations*/
+
+      .animation-fast {
+        animation: fadeinboxes .6s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        -moz-animation: fadeinboxes .6s;
+        -moz-animation-fill-mode: forwards;
+        -webkit-animation: fadeinboxes .6s;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @keyframes fadeinboxes {
+        from {
+          opacity: 0
+        }
+        to {
+          opacity: 1
+        }
+      }

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Bernier: Web Developer</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato"/>
+    <script>
+      $(document).ready(function () {
+        $(".workbox").css("display", "none");
+        $(".anchor-item").click(function () {
+          var href = $(this).attr('href').substring(1);
+          $('html, body').animate({
+            scrollTop: $("#" + href).offset().top - 62
+          }, 500);
+        });
+        $(".work-icon:eq(0)").click(function () {
+          workFunction(0);
+        });
+        $(".work-icon:eq(1)").click(function () {
+          workFunction(1);
+        });
+        $(".work-icon:eq(2)").click(function () {
+          workFunction(2);
+        });
+        $(".work-icon:eq(3)").click(function () {
+          workFunction(3);
+        });
+        $(".work-back-button").click(function () {
+          workReset();
+        });
+        function workFunction(i) {
+          $(".workbox").css("display", "none");
+          $(".workbox:eq(" + i + ")").css("display", "inline-block");
+          $(".work-icon").css("display", "none");
+        }
+        function workReset() {
+          $(".workbox").css("display", "none");
+          $(".work-icon").css("display", "inline-block");
+        }
+      });
+      //Scroll and fade in object
+      $(window).scroll(function () {
+        $('.hideContent').each(function (i) {
+          var objBottom = $(this).offset().top + $(this).outerHeight();
+          var windowBottom = $(window).scrollTop() + $(window).height();
+          if (windowBottom > objBottom - 250 || windowBottom > objBottom) {
+            $(this).animate({
+              'opacity': '1'
+            }, 500);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="outer">
+        <div class="container">
+          <h1 style="color:#292929;">Robert Bernier</h1>
+          <h3 style="color:#292929;">Web Developer</h3>
+        </div>
+      </div>
+    </div>
+    <div id="bio">
+      <div class="outer">
+        <div class="container hideContent">
+          <div id="left-bio-box">
+            <img class="bio-picture" src="img/bio-pic.jpg">
+          </div>
+          <div id="right-bio-box">
+            <p>Robert Bernier is a web developer from the Greater Boston area. He is currently studying for his bachelors in computer science at Framingham State University. He works on campus as a web developer intern in addition to being a supplemental
+              instructor (SI) for an introduction to web development course. He is passionate about the web and loves to experiment with new ways to make pages more fun and enjoyable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="work" class="animation-fast">
+      <div class="outer">
+        <div class="container hideContent">
+          <a>
+            <div id="internship-button" class="work-icon work-icon-one-of-two animation-fast">
+              <h2 class="animation-fast">FSU Internship</h2>
+            </div>
+          </a>
+          <a>
+            <div id="si-button" class="work-icon work-icon-one-of-two animation-fast">
+              <h2 class="animation-fast">Supplemental Instructor</h2>
+            </div>
+          </a>
+          <a>
+            <div id="army-button" class="work-icon work-icon-one-of-two animation-fast">
+              <h2 class="animation-fast">USARIEM Internship</h2>
+            </div>
+          </a>
+          <a>
+            <div id="portfolio-button" class="work-icon work-icon-one-of-two animation-fast">
+              <h2 class="animation-fast">Personal Website</h2>
+            </div>
+          </a>
+        </div>
+        <div class="container">
+          <div class="workbox animation-fast">
+            <h1>Framingham State University Website Redesign</h1>
+            <p class="desc-text">Framingham State university, Fraingham, MA</p>
+            <p class="desc-text">(Summer 2015 - Winter 2016)</p>
+            <p class="desc-text">Aided in the development of new Framingham State Website.</p>
+            <br/>
+            <p class="desc-text">Experience:</p>
+            <ul>
+              <li class="desc-text">Responsive web design and development</li>
+              <li class="desc-text">CMS &amp; SEO Tools (Percussion, Cascade, Siteimprove)</li>
+              <li class="desc-text">Version control &amp; automation software (Git &amp; Gulp)</li>
+              <li class="desc-text">Adobe Photoshop CC.</li>
+            </ul>
+            <br/>
+            <a class="body-link" href="docs/fsu-web-before.pdf" target="_blank">Landing page before redesign</a>
+            <br/>
+            <a class="body-link" href="https://www.framingham.edu/" target="_blank">Landing page after redesign</a>
+            <br/>
+            <br/><br/>
+            <a class="work-back-button">Back</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="workbox animation-fast">
+            <h1>Supplemental Instructor</h1>
+            <p class="desc-text">Framingham State university, Fraingham, MA</p>
+            <p class="desc-text">(Fall 2015 - Winter 2016)</p>
+            <p class="desc-text">Instructor aid for website development course.</p>
+            <br/>
+            <p class="desc-text">Experience:</p>
+            <ul>
+              <li class="desc-text">Helped students tackle complex HTML, CSS, and JavaScript related concepts over the course of a semester.</li>
+              <li class="desc-text">Worked 10+ hours weekly inside and outside the classroom.</li>
+              <li class="desc-text">Aided course instructor to improve course material and implement new technologies in the classroom.</li>
+            </ul>
+            <br/><br/>
+            <a class="work-back-button">Back</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="workbox animation-fast">
+            <h1>USARIEM Internship</h1>
+            <p class="desc-text">Natick Labs, Natick, MA</p>
+            <p class="desc-text">(Natick Labs, Natick, MA: Summer 2016)</p><br/>
+            <p class="desc-text">Designed and developed a responsive web-based application to interface with several US ARMY thermoregulatory response models with a key focus on SCENARIO model.</p>
+            <br/>
+            <a class="body-link" href="https://github.com/rbernier93/USARIEM-thermoregulatory-web-application">Github Repository</a>
+            <br/><br/>
+            <a class="work-back-button">Back</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="workbox animation-fast">
+            <h1>Personal Website</h1>
+            <p class="desc-text">(Winter 2015)</p>
+            <p class="desc-text">Hand coded website to test UI and resonsive design skills</p>
+            <br/>
+            <p class="desc-text">This website was built from scratch with:</p>
+            <ul>
+              <li class="desc-text">HTML and CSS</li>
+              <li class="desc-text">JavaScript/jQuery</li>
+            </ul>
+            <br/>
+            <a class="body-link" href="https://github.com/rbernier93/Personal-Website">Github Repository</a>
+            <br/><br/>
+            <a class="work-back-button">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="media">
+      <div class="outer">
+        <div class="container hideContent">
+          <a href="https://github.com/rbernier93" target="_blank">
+            <i class="fa fa-github fa-5x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/robert-bernier-b5504bbb" target="_blank">
+            <i class="fa fa-linkedin fa-5x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="outer">
+        <div id="contact-field" class="container hideContent">
+          <h2>Contact Me.</h2>
+          <br/>
+          <a class="mail-icon" href="mailto:robbernier93@gmail.com" onclick="mailConfirmation();">
+            <i class="fa fa-envelope fa-5x"></i>
+          </a>
+        </div>
+      </div>
+      <script type="text/javascript">
+        function mailConfirmation() {
+          document.getElementById("contact-field").innerHTML = "<h2>Thanks for reaching out!</h2><br/><p>In the event your browser isn't configured with your prefered email application, please reach me at:</p><br/><h4>robbernier93@gmail.com</h4><br/><p>-Rob</p>";
+        }
+      </script>
+    </div>
+  </body>
+
+</html>
